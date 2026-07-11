@@ -1,0 +1,1 @@
+k8s.cluster.name=my-cluster,k8s.namespace.name=ns1,k8s.pod.name=my-pod-abc123

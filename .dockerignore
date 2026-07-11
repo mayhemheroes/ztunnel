@@ -1,0 +1,21 @@
+# .dockerignore for the commit-image build.
+# Goal: bake in the FULL repo (including .git history — the grader uses it),
+# dropping only local build artifacts and editor/OS cruft. Dev image, not minimal.
+
+# ── Build outputs / local cruft ──────────────────────────────────────────────
+# .cargo/config.toml pins [build] target-dir = "out/rust" at the repo root; the fuzz/
+# sub-workspace and any plain `cargo build`/`cargo test` land under target/ too.
+out/
+target/
+fuzz/target/
+var/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~

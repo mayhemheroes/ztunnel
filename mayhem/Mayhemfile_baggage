@@ -1,0 +1,8 @@
+project: ztunnel
+target: baggage
+cmds:
+  - cmd: /mayhem/baggage
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/baggage/testsuite
